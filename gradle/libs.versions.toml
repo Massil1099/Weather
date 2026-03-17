@@ -9,6 +9,8 @@ lifecycleRuntimeKtx = "2.10.0"
 activityCompose = "1.12.4"
 composeBom = "2024.09.00"
 
+retrofit = "3.0.0"
+
 
 lifecycleViewmodelCompose = "2.10.0"
 runtimeLiveData = "1.10.0"
@@ -16,6 +18,8 @@ runtimeLiveData = "1.10.0"
 kotlinKsp = "2.0.0-1.0.24"
 
 daggerHilt = "2.57.2"
+
+moshi = "1.15.2"
 
 
 [libraries]
@@ -39,6 +43,11 @@ androidx-compose-runtime = { group = "androidx.compose.runtime", name = "runtime
 
 dagger-hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "daggerHilt" }
 dagger-hilt-compiler = { group = "com.google.dagger", name = "hilt-compiler", version.ref = "daggerHilt" }
+
+retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
+
+moshi-kotlin = { group = "com.squareup.moshi", name = "moshi-kotlin", version.ref = "moshi" }
+retrofit-converter-moshi = { group = "com.squareup.retrofit2", name = "converter-moshi", version.ref = "retrofit" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

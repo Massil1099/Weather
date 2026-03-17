@@ -70,4 +70,10 @@ dependencies {
 
     implementation (libs.dagger.hilt.android )
     ksp (libs.dagger.hilt.compiler )
+
+    implementation(libs.retrofit)
+
+    implementation ( libs.moshi.kotlin )
+    implementation ( libs.retrofit.converter.moshi )
+
 }
