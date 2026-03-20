@@ -76,4 +76,8 @@ dependencies {
     implementation ( libs.moshi.kotlin )
     implementation ( libs.retrofit.converter.moshi )
 
+    implementation ( libs.androidx.room.runtime )
+    ksp ( libs.androidx.room.compiler )
+    implementation ( libs.androidx.room.ktx)
+
 }

@@ -41,7 +41,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import dagger.hilt.android.AndroidEntryPoint
-import fr.mastersid.massil.weather.data.Weather
+import fr.mastersid.massil.weather.db.Weather
 import fr.mastersid.massil.weather.ui.theme.WeatherTheme
 import fr.mastersid.massil.weather.viewmodel.WeatherListViewModel
 import kotlin.collections.emptyList
@@ -86,6 +86,7 @@ fun WeatherScreen(modifier: Modifier, weatherListViewModel: WeatherListViewModel
                 sortByCity = sortByCity
             ) { checked -> sortByCity = checked
             }
+            Spacer( modifier = Modifier.height(100.dp))
         },
                 floatingActionButton = {
             FloatingActionButton(
@@ -98,7 +99,7 @@ fun WeatherScreen(modifier: Modifier, weatherListViewModel: WeatherListViewModel
             }
         }
     ) { innerPadding ->
-        Box ( modifier = Modifier . padding ( innerPadding ) . fillMaxSize () ) {
+        Box ( modifier = Modifier.padding ( innerPadding ) . fillMaxSize () ) {
 
             LazyColumn(
                 modifier = Modifier
@@ -113,9 +114,9 @@ fun WeatherScreen(modifier: Modifier, weatherListViewModel: WeatherListViewModel
             items(weatherList) { weather ->
                 WeatherRow(weather)
             }
-                item {
-                    Spacer(modifier = Modifier.height(64.dp))
-                }
+                // item {
+                //    Spacer(modifier = Modifier.height(64.dp))
+                //}
         }
             if (refreshing) {
                 CircularProgressIndicator(modifier = Modifier.align(Alignment.Center))
@@ -144,7 +145,7 @@ fun WeatherRow( weather : Weather ) {
 @Composable
 fun SortByCitySwitch ( modifier : Modifier , sortByCity : Boolean , onChange : ( Boolean ) -> Unit ) {
     Row(
-        horizontalArrangement = Arrangement . spacedBy (16. dp) ,
+        horizontalArrangement = Arrangement . spacedBy (16.dp) ,
         verticalAlignment = Alignment.CenterVertically ,
         modifier = modifier
     ) {
@@ -159,7 +160,7 @@ fun SortByCitySwitch ( modifier : Modifier , sortByCity : Boolean , onChange : (
 
 
 @Composable
-fun WeatherListScreen ( weatherListViewModel : WeatherListViewModel = viewModel () ) {
+fun WeatherListScreen ( weatherListViewModel : WeatherListViewModel = viewModel() ) {
 
 }
 

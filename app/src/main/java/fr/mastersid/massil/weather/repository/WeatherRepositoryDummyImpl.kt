@@ -1,6 +1,6 @@
 package fr.mastersid.massil.weather.repository
 
-import fr.mastersid.massil.weather.data.Weather
+import fr.mastersid.massil.weather.db.Weather
 import fr.mastersid.massil.weather.data.WeatherResponse
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableSharedFlow

@@ -1,7 +1,7 @@
 package fr.mastersid.massil.weather.webservice
 
 import fr.mastersid.massil.weather.data.ListWeatherJson
-import fr.mastersid.massil.weather.data.Weather
+import fr.mastersid.massil.weather.db.Weather
 import okhttp3.ResponseBody
 import retrofit2.Response
 import retrofit2.http.GET

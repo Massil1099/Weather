@@ -4,7 +4,7 @@ import com.squareup.moshi.FromJson
 import com.squareup.moshi.ToJson
 import fr.mastersid.massil.weather.data.ListWeatherJson
 import fr.mastersid.massil.weather.data.MainJson
-import fr.mastersid.massil.weather.data.Weather
+import fr.mastersid.massil.weather.db.Weather
 import fr.mastersid.massil.weather.data.WeatherJson
 
 class WeatherMoshiAdapter {

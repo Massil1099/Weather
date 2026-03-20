@@ -5,7 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
-import fr.mastersid.massil.weather.data.Weather
+import fr.mastersid.massil.weather.db.Weather
 import fr.mastersid.massil.weather.data.WeatherResponse
 import fr.mastersid.massil.weather.repository.WeatherRepository
 import kotlinx.coroutines.Dispatchers
